@@ -7,7 +7,7 @@
     <img src="{{ '../img/jumbotron.jpg' }}" alt="">
 </div>
 
-<div class="bg-black">
+<div class="bg-black comics">
     <div class="container position-relative">
         <span class="blue_title px-3 py-2">CURRENT SERIES</span>
         <div class="comics_container d-flex flex-wrap py-5">

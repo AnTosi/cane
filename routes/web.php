@@ -29,10 +29,10 @@ Route::get('admin/posts', 'Admin\PostController@index')->name('admin.posts.index
 
 
 // mostra form per creare nuova risorsa
-Route::get('posts/create', 'Admin\PostController@create')->name('admin.posts.create');
+Route::get('admin/posts/create', 'Admin\PostController@create')->name('admin.posts.create');
 
 //salvare risorsa
-Route::post('posts', 'Admin\PostController@store')->name('admin.posts.store');
+Route::post('admin/posts', 'Admin\PostController@store')->name('admin.posts.store');
 
 //Mostro singola risorsa
 Route::get('posts/{post}', 'Admin\PostController@show')->name('admin.posts.post');

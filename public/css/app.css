@@ -90,12 +90,12 @@ main .comics_container img {
   -o-object-position: top;
      object-position: top;
 }
-main button {
+main .comics button {
   width: 180px;
   height: 30px;
   border: none;
 }
-main button.blue_button {
+main .comics button.blue_button {
   background-color: #0282F9;
   color: white;
 }

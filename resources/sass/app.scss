@@ -111,14 +111,17 @@ main {
         }
     }
 
-    button {
-        width: 180px;
-        height: 30px;
-        border: none;
-        &.blue_button {
-            background-color: $main-blue;
-            color: white;
+    .comics {
+        button {
+            width: 180px;
+            height: 30px;
+            border: none;
+            &.blue_button {
+                background-color: $main-blue;
+                color: white;
+            }
         }
+
     }
 
     .blueband_container {
