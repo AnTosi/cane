@@ -1,7 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Posts table</h1>
+
+    <div class="heading d-flex d-flex flex-column align-items-center ">
+        <h1 class="text-center">Posts table</h1>
+        <a name="" id="" class="btn btn-primary" href="#" role="button">Create</a>
+    </div>
     <div class="container">
         <table class="table">
             <thead>
@@ -26,6 +30,8 @@
                 @endforeach
             </tbody>
         </table>
+
+        {{$posts->links()}}
 
     </div>
     

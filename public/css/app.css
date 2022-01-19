@@ -20,7 +20,6 @@ li {
 li a {
   text-decoration: none;
   color: inherit;
-  line-height: 80px;
 }
 li a:hover {
   color: inherit;
