@@ -7,10 +7,10 @@ use Illuminate\Http\Request;
 
 class ComicController extends Controller
 {
-    public function index()
+    public function home()
     {
         $comics = Comic::all();
-        return view('comics.home', compact('comic'));
+        return view('comics.home', compact('comics'));
     }
 
     public function show(Comic $comic)
