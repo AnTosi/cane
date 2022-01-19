@@ -67,7 +67,8 @@
                 </div>
                 <div class="col-8 people">
                     <!-- Did with the foreach loop to give them all a link, but it would have left a comma after the last word, so for now the closest to the screen is with implode. -->
-                    {{implode(", ", $comic['artists'])}}
+                    {{-- {{implode(", ", $comic['artists'])}} --}}
+                    Artist Placeholder
                 </div>
             </div>
             <div class="d-flex credit py-2">
@@ -76,7 +77,8 @@
                 </div>
                 <div class="col-8 people">
                     <!-- Did with the foreach loop to give them all a link, but it would have left a comma after the last word, so for now the closest to the screen is with implode. -->
-                    {{implode(", ", $comic['writers'])}}
+                    {{-- {{implode(", ", $comic['writers'])}} --}}
+                    Writers placeholder
                 </div>
             </div>
         </div>

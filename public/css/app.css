@@ -17,13 +17,11 @@
 li {
   list-style: none;
 }
-
 li a {
   text-decoration: none;
   color: inherit;
   line-height: 80px;
 }
-
 li a:hover {
   color: inherit;
 }
@@ -32,30 +30,24 @@ header div.upper_band {
   color: white;
   font-size: 0.8rem;
 }
-
 header .nav-container {
   height: 120px;
 }
-
 header img {
   height: 80px;
 }
-
 header ul {
   margin-bottom: 0;
 }
-
 header ul li {
   height: 120px;
   line-height: 120px;
   vertical-align: middle;
 }
-
 header ul li.active {
   color: #0282F9;
   border-bottom: 5px solid #0282F9;
 }
-
 header .search-bar {
   width: 10%;
   border-bottom: 3px solid #0282F9;
@@ -73,7 +65,6 @@ header .search-bar {
 main .jumbotron {
   height: 400px;
 }
-
 main .jumbotron img {
   width: 100%;
   height: 100%;
@@ -82,7 +73,6 @@ main .jumbotron img {
   -o-object-position: top;
      object-position: top;
 }
-
 main .blue_title {
   background-color: #0282F9;
   color: white;
@@ -93,7 +83,6 @@ main .blue_title {
   left: 0;
   transform: translate(0, -50%);
 }
-
 main .comics_container img {
   width: 185px;
   height: 185px;
@@ -102,23 +91,19 @@ main .comics_container img {
   -o-object-position: top;
      object-position: top;
 }
-
 main button {
   width: 180px;
   height: 30px;
   border: none;
 }
-
 main button.blue_button {
   background-color: #0282F9;
   color: white;
 }
-
 main .blueband_container {
   color: white;
   background-color: #0282F9;
 }
-
 main .blueband_container img {
   height: 50px;
 }
@@ -126,7 +111,6 @@ main .blueband_container img {
 .page_bottom {
   height: 110px;
 }
-
 .page_bottom button {
   border-style: none;
   border: 2px solid #0282F9;
@@ -136,11 +120,9 @@ main .blueband_container img {
   font-weight: 700;
   background-color: transparent;
 }
-
 .page_bottom img {
   height: 40px;
 }
-
 .page_bottom .right-bottom {
   justify-content: right;
   align-items: center;
@@ -150,17 +132,15 @@ main .blueband_container img {
 }
 
 footer .links {
-  background-image: url(/images/footer-bg.jpg?dfd68d2946f211e1b678af05fd2f830b);
+  background-image: url("../img/footer-bg.jpg");
   background-size: cover;
   height: 405px;
   flex-wrap: wrap;
   position: relative;
 }
-
 footer .links .container {
   height: 405px;
 }
-
 footer .links .container h3 {
   font-size: 1.1rem;
   font-weight: 700;
@@ -168,7 +148,6 @@ footer .links .container h3 {
   margin-bottom: 0.7rem;
   color: white;
 }
-
 footer .links .container ul {
   list-style-type: none;
   -webkit-margin-before: 0;
@@ -178,7 +157,6 @@ footer .links .container ul {
   -webkit-padding-start: 0;
           padding-inline-start: 0;
 }
-
 footer .links .container ul li {
   list-style: none;
   padding-left: 0;
@@ -188,24 +166,21 @@ footer .links .container ul li {
   display: block;
   font-family: "Open Sans", sans-serif;
 }
-
 footer .links .container .links-wrapper {
   text-align: left;
   align-items: flex-start;
   height: 345px;
   padding-top: 1.5rem;
 }
-
 footer .links .container .link-sub-area {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
-
 footer .dc_fat_logo {
   height: 405px;
   width: 66%;
-  background-image: url(/images/dc-logo-bg.png?f4404ce9dc132a08a47f19e3f73f1417);
+  background-image: url("../img/dc-logo-bg.png");
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: 50%;
@@ -213,7 +188,6 @@ footer .dc_fat_logo {
   top: 0;
   right: 20%;
 }
-
 footer .copyrights {
   color: grey;
   font-size: 0.8rem;
@@ -225,32 +199,27 @@ footer .copyrights {
   height: 100%;
   margin: auto;
 }
-
 .container_half .poster {
   position: absolute;
   bottom: 20px;
   left: 0;
   border: 1px solid white;
 }
-
 .container_half .poster .img_container {
   position: relative;
   height: 100%;
   width: 100%;
 }
-
 .container_half .poster .img_container .label {
   position: absolute;
   background-color: #00A9D9;
   color: white;
   padding: 0.1rem 0.5rem;
 }
-
 .container_half .poster .img_container .label.top_left {
   top: 0;
   left: 0;
 }
-
 .container_half .poster .img_container .label.bottom {
   bottom: 0;
   left: 0;
@@ -259,7 +228,7 @@ footer .copyrights {
 }
 
 .bg_jumbotron {
-  background-image: url(/images/jumbotron.jpg?1b0a3671766964a4114f90322970b124);
+  background-image: url("../img/jumbotron.jpg");
   height: 400px;
   background-size: cover;
   background-position: top;
@@ -282,7 +251,6 @@ h3 {
   font-size: 1rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.568);
 }
-
 .commercial_info .right {
   border-left: 1px solid rgba(0, 0, 0, 0.568);
   padding-left: 1.5rem;
@@ -292,28 +260,23 @@ h3 {
   background-color: #F6F6F6;
   height: 375px;
 }
-
 .grey_info .left {
   padding-right: 2rem;
 }
-
 .grey_info h4 {
   font-size: 1.2rem;
   font-weight: 600;
   color: #003F5E;
   border-bottom: 1px solid rgba(128, 128, 128, 0.4);
 }
-
 .grey_info .credit {
   border-bottom: 1px solid rgba(128, 128, 128, 0.4);
 }
-
 .grey_info .credit .title {
   color: #003F5E;
   font-weight: 600;
   font-size: 1.1rem;
 }
-
 .grey_info .credit .people {
   color: #0282F9;
 }
@@ -323,18 +286,14 @@ h3 {
   font-weight: 700;
   opacity: 0.7;
 }
-
 .shop_links .cta_container {
   border-left: 1px solid rgba(128, 128, 128, 0.4);
 }
-
 .shop_links .cta_container .cta {
   height: 45px;
   filter: grayscale(1);
   opacity: 0.35;
 }
-
 .shop_links .cta_container.last {
   border-right: 1px solid rgba(128, 128, 128, 0.4);
 }
-
