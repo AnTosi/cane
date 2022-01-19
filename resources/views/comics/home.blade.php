@@ -14,7 +14,7 @@
             @foreach ($comics as $comic)
             <div class="col-2">
                 <div class="p-2">
-                    <a href="comics/{{$comic->id}}">
+                    <a href="{{ route('comic', $comic->id) }}">
                         <img src="{{ $comic->thumb }}" alt="{{$comic->title}} poster">
                     </a>
                     <h6 class="text-white py-2">{{ strtoupper($comic->series) }}</h6>
