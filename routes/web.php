@@ -25,25 +25,26 @@ Route::get('comics/{comic}', 'ComicController@show')->name('comic');
 // posts
 
 // mostra lista risorse
-Route::get('posts', 'Admin/PostController@index')->name('admin.posts.index');
+Route::get('posts', 'Admin\PostController@index')->name('admin.posts.index');
 
 
 // mostra form per creare nuova risorsa
-Route::get('posts/create', 'Admin/PostController@create')->name('admin.posts.create');
+Route::get('posts/create', 'Admin\PostController@create')->name('admin.posts.create');
 
 //salvare risorsa
-Route::post('posts', 'Admin/PostController@store')->name('admin.posts.store');
+Route::post('posts', 'Admin\PostController@store')->name('admin.posts.store');
 
 //Mostro singola risorsa
-Route::get('posts/{post}', 'Admin/PostController@show')->name('admin.posts.post');
+Route::get('posts/{post}', 'Admin\PostController@show')->name('admin.posts.post');
 
 //Mostro form per modificare risorsa
-Route::post('posts/{post}/edit', 'Admin/PostController@edit')->name('admin.posts.edit');
+Route::post('posts/{post}/edit', 'Admin\PostController@edit')->name('admin.posts.edit');
 
 //Aggiorniamo la risorsa nel database
-Route::put('posts/{post}', 'Admin/PostController@update')->name('admin.posts.update');
+Route::put('posts/{post}', 'Admin\PostController@update')->name('admin.posts.update');
 
 //Per eliminare risorsa nel database
-Route::delete('posts/{post}', 'Admin/PostController@destroy')->name('admin.post.destroy');
+Route::delete('posts/{post}', 'Admin\PostController@destroy')->name('admin.post.destroy');
 
-
+//shortcut
+Route::resource('movies', 'Admin\MovieController');
