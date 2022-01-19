@@ -43,7 +43,7 @@ class PostController extends Controller
         $post->title = $request->title;
         $post->text = $request->text;
         $post->save();
-
+        
         //post | redirect | get
         return redirect()->route('admin.posts.index');
         
