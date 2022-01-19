@@ -1,1 +1,348 @@
-//
+$main-blue: #0282F9;
+$light_blue: #00A9D9;
+$dark_blue: #003F5E;
+$box-green: #55BA59;
+$light-grey: #F6F6F6;
+$border-grey: rgba(128, 128, 128, 0.400);
+
+.bg_main-blue {
+    background-color: $main-blue;
+}
+
+.bg_light-grey {
+    background-color: $light-grey;
+}
+
+.text_main-blue {
+    color: $main-blue;
+}
+
+.col-20 {
+    width: 20%;
+}
+
+li {
+    list-style: none;
+    a {
+        text-decoration: none;
+        color: inherit;
+        line-height: 80px;
+    }
+
+    a:hover {
+        color: inherit;
+    }
+}
+
+header {
+    div.upper_band {
+    color: white;
+    font-size: 0.8rem;
+    }
+
+    .nav-container {
+        height: 120px;
+    }
+
+    img {
+        height: 80px;
+    }
+
+    ul {
+        margin-bottom: 0;
+
+        li {
+            height: 120px;
+            line-height: 120px;
+            vertical-align: middle;
+    
+            &.active {
+                color: $main-blue;
+                border-bottom: 5px solid $main-blue;
+            }
+    
+        }
+    }
+
+    .search-bar {
+        width: 10%;
+        border-bottom: 3px solid $main-blue;
+        text-align: right;
+    }
+
+}
+
+.half-rem {
+    font-size: 0.5rem;
+}
+
+.semi-bold {
+    font-weight: 600;
+}
+
+main {
+    .jumbotron {
+        height: 400px;
+         img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        }
+    }
+
+    .blue_title {
+        background-color: $main-blue;
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 700;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(0, -50%);
+
+    }
+
+    .comics_container {
+        img {
+            width: 185px;
+            height: 185px;
+            object-fit: cover;
+            object-position: top;
+        }
+    }
+
+    button {
+        width: 180px;
+        height: 30px;
+        border: none;
+        &.blue_button {
+            background-color: $main-blue;
+            color: white;
+        }
+    }
+
+    .blueband_container {
+        color: white;
+        background-color: $main-blue;
+        img {
+            height: 50px;
+        }
+    }
+}
+
+
+.page_bottom{
+    height: 110px;
+    button {
+        border-style: none;
+        border: 2px solid $main-blue;
+        padding: 0.7rem;
+        color: white;
+        font-size: 0.9rem;
+        font-weight: 700;
+        background-color: transparent;
+    }
+
+    img {
+      height: 40px;
+    }
+    .right-bottom {
+      justify-content: right;
+      align-items: center;
+      color: $main-blue;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+}
+
+footer {
+
+    .links {
+        background-image: url('../img/footer-bg.jpg');
+        background-size: cover;
+        height: 405px;
+        flex-wrap: wrap;
+        position: relative;
+      
+        .container {
+          height: 405px;
+            h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-top: 1rem;
+            margin-bottom: 0.7rem;
+            color: white;
+            }
+            ul {
+                list-style-type: none;
+                margin-block-start: 0;
+                margin-block-end: 0;
+                padding-inline-start: 0;
+            
+                li {
+                list-style: none;
+                padding-left: 0;
+                color: grey;
+                padding-bottom: 5px;
+                font-size: 0.8rem;
+                display: block;
+                font-family: 'Open Sans', sans-serif;
+                }
+            }
+            
+            .links-wrapper {
+            text-align: left;
+            align-items: flex-start;
+            height: 345px;
+            padding-top: 1.5rem;
+            }
+            .link-sub-area {
+            height: fit-content;
+            }
+        }
+    }
+    .dc_fat_logo {
+        height: 405px;
+        width: 66%;
+        background-image: url('../img/dc-logo-bg.png');
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: 50%;
+        position: absolute;
+        top: 0;
+        right:20%;
+    }
+
+    .copyrights {
+        color: grey;
+        font-size: 0.8rem;
+        margin-top: -20px;
+    }
+
+    
+}
+
+.container_half {
+    width: 60%;
+    height: 100%;
+    margin: auto;
+
+    .poster {
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        border: 1px solid white;
+
+        .img_container {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            .label {
+                position: absolute;
+                background-color: $light_blue;
+                color: white;
+                padding: 0.1rem 0.5rem;
+
+                &.top_left {
+                    top: 0;
+                    left: 0;
+                }
+
+                &.bottom {
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    
+    }
+}
+
+.bg_jumbotron {
+    background-image: url('../img/jumbotron.jpg');
+    height: 400px;
+    background-size: cover;
+    background-position: top;
+
+}
+
+.blue_band {
+    background-color: $main-blue;
+    height: 80px;
+    position: relative;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: darkblue;
+}
+
+.commercial_info {
+    background-color: $box-green;
+    font-size: 1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.568);
+    .right {
+        border-left: 1px solid rgba(0, 0, 0, 0.568);
+        padding-left: 1.5rem;
+    }
+
+
+}
+
+
+.grey_info {
+    background-color: $light-grey;
+    height: 375px;
+
+    .left {
+        padding-right: 2rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: $dark_blue;       
+        border-bottom: 1px solid $border-grey;
+    }
+
+    
+
+    .credit {
+        border-bottom: 1px solid $border-grey;
+
+        .title {
+            color: $dark_blue;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .people {
+            color: $main-blue;            
+        }
+    }
+}
+
+.shop_links {
+    border-top: 1px solid $border-grey;
+    font-weight: 700;
+    opacity: 0.7;
+
+    .cta_container {
+
+        border-left: 1px solid $border-grey;
+
+        .cta {
+            height: 45px;
+            filter: grayscale(1);
+            opacity: 0.35;
+        }
+
+        &.last {
+            border-right: 1px solid $border-grey;
+        }
+    }
+}
