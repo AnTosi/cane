@@ -11,11 +11,13 @@
     <div class="container position-relative">
         <span class="blue_title px-3 py-2">CURRENT SERIES</span>
         <div class="comics_container d-flex flex-wrap py-5">
-            @foreach ($comics as $id => $comic)
+            @foreach ($comics as $comic)
             <div class="col-2">
                 <div class="p-2">
-                    <a href="comics/{{$id}}"><img src="{{$comic['thumb']}}" alt="{{$comic['title']}}"></a>
-                    <h6 class="text-white py-2">{{ strtoupper($comic['series']) }}</h6>
+                    <a href="comics/{{$comic->id}}">
+                        <img src="{{ $comic->thumb }}" alt="{{$comic->title}} poster">
+                    </a>
+                    <h6 class="text-white py-2">{{ strtoupper($comic->series) }}</h6>
                 </div>
             </div>
             @endforeach

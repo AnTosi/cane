@@ -22,7 +22,6 @@ Route::get('/', function (){
 // comics pages routes
 Route::get('/comics', 'ComicController@index')->name('comics');
 
-
 Route::get('comics/{id}', function ($id){
     $comics = config('db.comics');
 
