@@ -44,16 +44,19 @@ class PostController extends Controller
         $validated_data = $request->validate(
             [
                 'title'=>'required | unique:posts',
-                'text'=>'nullable'
+                'text'=>'required'
             ]
             );
         
-        ddd($validated_data);
+        // ddd($validated_data);
         //
-        $post = new Post();
-        $post->title = $request->title;
-        $post->text = $request->text;
-        $post->save();
+        // $post = new Post();
+        // $post->title = $request->title;
+        // $post->text = $request->text;
+        // $post->save();
+        
+        //questo mi sostituisce la parte sopra, ma devo fare assegnazione di massa con fillable
+        Post::create($validated_data);
         
         //post | redirect | get
         return redirect()->route('admin.posts.index');
