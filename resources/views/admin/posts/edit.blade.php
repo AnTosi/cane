@@ -4,9 +4,8 @@
     <div class="container my-3">
         <h1>Edit Post</h1>
     
-        <form action="{{route('admin.posts.update', $post->id)}}" method="post">
+        <form action="{{route('admin.posts.store', $post->id)}}" method="post">
             @csrf
-            @method('PUT')
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
                 <input type="text" name="title" id="title" class="form-control @error('title') is-invalid @enderror" placeholder="Type your title here" aria-describedby="titleHelper">

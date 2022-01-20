@@ -38,7 +38,7 @@ Route::post('admin/posts', 'Admin\PostController@store')->name('admin.posts.stor
 Route::get('admin/posts/{post}', 'Admin\PostController@show')->name('admin.posts.show');
 
 //Mostro form per modificare risorsa
-Route::post('admin/posts/{post}/edit', 'Admin\PostController@edit')->name('admin.posts.edit');
+Route::get('admin/posts/{post}/edit', 'Admin\PostController@edit')->name('admin.posts.edit');
 
 //Aggiorniamo la risorsa nel database
 Route::put('admin/posts/{post}', 'Admin\PostController@update')->name('admin.posts.update');
