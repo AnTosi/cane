@@ -98,6 +98,18 @@ class PostController extends Controller
     public function update(Request $request, Post $post)
     {
         //
+        $validated_data = $request->validate(
+            [
+                'title'=>'required | unique:posts',
+                'text'=>'required'
+            ]
+            );
+
+            $post->update($validated_data);
+
+            return redirect()->route('admin.posts.index');
+
+        // ddd($post, $request->all());
     }
 
     /**
