@@ -44,7 +44,7 @@ Route::get('admin/posts/{post}/edit', 'Admin\PostController@edit')->name('admin.
 Route::put('admin/posts/{post}', 'Admin\PostController@update')->name('admin.posts.update');
 
 //Per eliminare risorsa nel database
-Route::delete('admin/posts/{post}', 'Admin\PostController@destroy')->name('admin.post.destroy');
+Route::delete('admin/posts/{post}', 'Admin\PostController@destroy')->name('admin.posts.destroy');
 
 //shortcut
 Route::resource('movies', 'Admin\MovieController');

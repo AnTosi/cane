@@ -107,7 +107,7 @@ class PostController extends Controller
 
             $post->update($validated_data);
 
-            return redirect()->route('admin.posts.index');
+            return redirect()->route('admin.posts.index')->with('feedback', 'Post successfully modified');
 
         // ddd($post, $request->all());
     }
@@ -121,5 +121,7 @@ class PostController extends Controller
     public function destroy(Post $post)
     {
         //
+        $post->delete();
+        return redirect()->route('admin.posts.index')->with('feedback', 'Post removed');
     }
 }
