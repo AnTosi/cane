@@ -38,6 +38,17 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+
+        //validazione:
+
+        $validated_data = $request->validate(
+            [
+                'title'=>'required | unique:posts',
+                'text'=>'nullable'
+            ]
+            );
+        
+        ddd($validated_data);
         //
         $post = new Post();
         $post->title = $request->title;
