@@ -4,7 +4,7 @@
     <div class="container my-3">
         <h1>Edit Post</h1>
     
-        <form action="{{route('admin.posts.edit')}}" method="post">
+        <form action="{{route('admin.posts.update', $post->id)}}" method="post">
             @csrf
             @method('PUT')
             <div class="mb-3">

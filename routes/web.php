@@ -35,16 +35,16 @@ Route::get('admin/posts/create', 'Admin\PostController@create')->name('admin.pos
 Route::post('admin/posts', 'Admin\PostController@store')->name('admin.posts.store');
 
 //Mostro singola risorsa
-Route::get('posts/{post}', 'Admin\PostController@show')->name('admin.posts.show');
+Route::get('admin/posts/{post}', 'Admin\PostController@show')->name('admin.posts.show');
 
 //Mostro form per modificare risorsa
-Route::post('posts/{post}/edit', 'Admin\PostController@edit')->name('admin.posts.edit');
+Route::post('admin/posts/{post}/edit', 'Admin\PostController@edit')->name('admin.posts.edit');
 
 //Aggiorniamo la risorsa nel database
-Route::put('posts/{post}', 'Admin\PostController@update')->name('admin.posts.update');
+Route::put('admin/posts/{post}', 'Admin\PostController@update')->name('admin.posts.update');
 
 //Per eliminare risorsa nel database
-Route::delete('posts/{post}', 'Admin\PostController@destroy')->name('admin.post.destroy');
+Route::delete('admin/posts/{post}', 'Admin\PostController@destroy')->name('admin.post.destroy');
 
 //shortcut
 Route::resource('movies', 'Admin\MovieController');
