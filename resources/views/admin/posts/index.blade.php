@@ -25,7 +25,7 @@
                         <td>{{$post->title}}</td>
                         <td>{{$post->created_at}}</td>
                         <td>{{$post->updated_at}}</td>
-                        <td><a href="{{route('admin.posts.show', $post->id)}}">View</a>  - Edit - Delete</td>
+                        <td><a href="{{route('admin.posts.show', $post->id)}}">View</a> - <a href="{{route('admin.posts.edit', $post->id)}}">Edit</a> - <a href="{{route('admin.posts.destroy')}}">Delete</a> </td>
                     </tr>    
                 @endforeach
             </tbody>
