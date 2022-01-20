@@ -26,7 +26,7 @@
           </div>
           <div class="mb-3">
             <label for="text" class="form-label">Text</label>
-            <textarea class="form-control" name="text" id="text" rows="5"></textarea>
+            <textarea class="form-control @error('text') is-invalid @enderror" name="text" id="text" rows="5"></textarea>
             @error('text')
               <div class="alert alert-danger">{{ $message }}</div>
             @enderror
