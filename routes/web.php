@@ -35,7 +35,7 @@ Route::get('admin/posts/create', 'Admin\PostController@create')->name('admin.pos
 Route::post('admin/posts', 'Admin\PostController@store')->name('admin.posts.store');
 
 //Mostro singola risorsa
-Route::get('posts/{post}', 'Admin\PostController@show')->name('admin.posts.post');
+Route::get('posts/{post}', 'Admin\PostController@show')->name('admin.posts.show');
 
 //Mostro form per modificare risorsa
 Route::post('posts/{post}/edit', 'Admin\PostController@edit')->name('admin.posts.edit');
