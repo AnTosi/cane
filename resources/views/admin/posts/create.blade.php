@@ -10,7 +10,7 @@
             <label for="title" class="form-label">Title</label>
             <input type="text" name="title" id="title" class="form-control @error('title') is-invalid @enderror" placeholder="Type your title here" aria-describedby="titleHelper">
             <small id="titleHelper" class="text-muted">Type a title for your post, max: 255 characters</small>
-            @if ($errors->any())
+            {{-- @if ($errors->any())
               <div class="alert alert-danger">
                   <ul>
                       @foreach ($errors->all() as $error)
@@ -18,7 +18,7 @@
                       @endforeach
                   </ul>
               </div>
-            @endif
+            @endif --}}
 
             @error('title')
               <div class="alert alert-danger">{{ $message }}</div>
