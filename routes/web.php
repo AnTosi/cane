@@ -21,6 +21,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'ComicController@index')->name('comics');
 Route::get('comics/{comic}', 'ComicController@show')->name('comic');
 
+// dashboard
+Route::view('admin', 'admin.dashboard');
+
 
 // posts
 

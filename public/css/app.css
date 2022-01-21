@@ -11287,10 +11287,11 @@ header ul li {
   height: 120px;
   line-height: 120px;
   vertical-align: middle;
+  border-bottom: 4px solid transparent;
 }
 header ul li.active {
   color: #0282F9;
-  border-bottom: 5px solid #0282F9;
+  border-bottom: 4px solid #0282F9;
 }
 header .search-bar {
   width: 10%;
