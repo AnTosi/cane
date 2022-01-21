@@ -60,10 +60,35 @@ Route::get('/news/{post}', 'PostController@show')->name('single-post');
 
 
 
-//Games
+//Games guest
 Route::get('/games', function () {
     return 'Games Page';
 })->name('games');
+
+//games admin
+
+//view
+Route::get('/admin/games', 'Admin\GameController@index')->name('admin.games.index');
+
+//show
+Route::get('/admin/games/{game}', 'Admin\GameController@show')->name('admin.games.show');
+
+//create
+Route::get('/admin/games/create', 'Admin\GameController@create')->name('admin.games.create');
+
+//save new
+Route::post('/admin/games', 'Admin\GameController@store')->name('admin.games.store');
+
+//edit
+Route::get('/admin/games/{game}/edit', 'Admin\GameController@edit')->name('admin.games.edit');
+
+//update
+Route::put('/admin/games/{game}', 'Admin\GameController@update')->name('admin.games.update');
+
+//delete
+Route::delete('/admin/games/{game}', 'Admin\GameController@destroy')->name('admin.games.destroy');
+
+
 
 //Guest routes: index and show
 
