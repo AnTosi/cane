@@ -49,5 +49,17 @@ Route::put('admin/posts/{post}', 'Admin\PostController@update')->name('admin.pos
 //Per eliminare risorsa nel database
 Route::delete('admin/posts/{post}', 'Admin\PostController@destroy')->name('admin.posts.destroy');
 
-//shortcut
+//tutto insieme
 Route::resource('movies', 'Admin\MovieController');
+
+//guest post
+Route::get('/news', 'PostController@index')->name('news');
+
+Route::get('/news/{post}', 'PostController@show')->name('single-post');
+
+Route::get('/games', function () {
+    return 'Games Page';
+})->name('games');
+
+
+
