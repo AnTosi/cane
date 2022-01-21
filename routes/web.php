@@ -57,9 +57,17 @@ Route::get('/news', 'PostController@index')->name('news');
 
 Route::get('/news/{post}', 'PostController@show')->name('single-post');
 
+
+
+
+//Games
 Route::get('/games', function () {
     return 'Games Page';
 })->name('games');
+
+//Guest routes: index and show
+
+//Admin routes: index, show, create, edit, store, update, delete
 
 
 
