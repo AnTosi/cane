@@ -41,11 +41,23 @@ header {
     color: white;
     font-size: 0.8rem;
     }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
 
+    a:hover {
+        color: inherit;
+    }
     .nav-container {
         height: 120px;
     }
 
+    a:visited {
+        color: inherit;
+        text-decoration: none;
+    }
+    
     img {
         height: 80px;
     }

@@ -11274,8 +11274,19 @@ header div.upper_band {
   color: white;
   font-size: 0.8rem;
 }
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+header a:hover {
+  color: inherit;
+}
 header .nav-container {
   height: 120px;
+}
+header a:visited {
+  color: inherit;
+  text-decoration: none;
 }
 header img {
   height: 80px;
