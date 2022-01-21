@@ -61,9 +61,9 @@ Route::get('/news/{post}', 'PostController@show')->name('single-post');
 
 
 //Games guest
-Route::get('/games', function () {
-    return 'Games Page';
-})->name('games');
+Route::get('/games', 'GameController@index')->name('games.index');
+
+Route::get('/games/{game}', 'GameController@show')->name('games.show');
 
 //games admin
 

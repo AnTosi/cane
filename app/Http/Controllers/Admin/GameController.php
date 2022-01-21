@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Game;
@@ -18,7 +18,7 @@ class GameController extends Controller
     {
         //
         $games = Game::orderBy('id', 'desc')->paginate(15);
-        return view('games.index', compact('games'));
+        return view('admin.games.index', compact('games'));
     }
 
     /**
