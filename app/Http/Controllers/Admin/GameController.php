@@ -41,6 +41,20 @@ class GameController extends Controller
     public function store(Request $request)
     {
         //
+        $validated_data = $request->validate(
+            [
+                'title'=>'required | unique:posts',
+                'description' => 'nullable',
+                'cover' => 'nullable',
+                'is_available' => 'nullable'
+
+            ]
+            );
+
+        Game::create($validated_data);
+
+        return redirect()->route('admin.games.index');
+
     }
 
     /**

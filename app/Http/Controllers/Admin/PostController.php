@@ -56,7 +56,7 @@ class PostController extends Controller
         // $post->text = $request->text;
         // $post->save();
         
-        //questo mi sostituisce la parte sopra, ma devo fare assegnazione di massa con fillable
+        //this replaces the above area but i need to do a mass assignation with  fillable
         Post::create($validated_data);
         
         //post | redirect | get

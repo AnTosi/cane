@@ -8,6 +8,7 @@
             <thead>
                 <tr>
                     <th>Id</th>
+                    <th>Cover</th>
                     <th>Title</th>
                     <th>Created at</th>
                     <th>Updated at</th>
@@ -19,7 +20,8 @@
                 @foreach ($games as $game)
                 <tr>
                     <td scope="row">{{$game->id}}</td>
-                    <td><img width="50px" src="{{$game->cover}}" alt=""></td>
+                    <td class="d-flex justify-content-center"><img height="80px" src="{{$game->cover}}" alt=""></td>
+                    <td>{{$game->title}}</td>
                     <td>{{$game->created_at}}</td>
                     <td>{{$game->updated_at}}</td>
                     <td>View - Edit - Delete</td>

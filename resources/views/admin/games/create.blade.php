@@ -13,12 +13,12 @@
                 <input type="text" name="title" id="title" class="form-control @error('title') is-invalid @enderror" placeholder="Type the game title here" aria-describedby="titleHelper" value="{{old('title')}}">
                 <small id="helpId" class="text-muted">Maximum 200 characters</small>
 
-                {{-- @error('title')
+                @error('title')
                     <div class="alert alert" role="alert">
                         {{$message}}
                     </div>
                     
-                @enderror --}}
+                @enderror
 
             </div>
             {{-- //add title --}}
