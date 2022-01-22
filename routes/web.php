@@ -34,6 +34,7 @@ Route::get('admin/posts', 'Admin\PostController@index')->name('admin.posts.index
 // mostra form per creare nuova risorsa
 Route::get('admin/posts/create', 'Admin\PostController@create')->name('admin.posts.create');
 
+
 //salvare risorsa
 Route::post('admin/posts', 'Admin\PostController@store')->name('admin.posts.store');
 
@@ -68,16 +69,18 @@ Route::get('/games/{game}', 'GameController@show')->name('games.show');
 //games admin
 
 //view
-Route::get('/admin/games', 'Admin\GameController@index')->name('admin.games.index');
-
-//show
-Route::get('/admin/games/{game}', 'Admin\GameController@show')->name('admin.games.show');
+Route::get('admin/games', 'Admin\GameController@index')->name('admin.games.index');
 
 //create
-Route::get('/admin/games/create', 'Admin\GameController@create')->name('admin.games.create');
+Route::get('admin/games/create', 'Admin\GameController@create')->name('admin.games.create');
 
 //save new
 Route::post('/admin/games', 'Admin\GameController@store')->name('admin.games.store');
+
+//show
+Route::get('admin/games/{game}', 'Admin\GameController@show')->name('admin.games.show');
+
+
 
 //edit
 Route::get('/admin/games/{game}/edit', 'Admin\GameController@edit')->name('admin.games.edit');
