@@ -21,7 +21,7 @@
                     <li class="mx-3 semi-bold"><a href="/">COMICS</a></li>
                     <li class="mx-3 semi-bold"><a href="#">MOVIES</a></li>
                     <li class="mx-3 semi-bold"><a href="#">TV</a></li>
-                    <li class="mx-3 semi-bold"><a href="#">GAMES</a></li>
+                    <li class="mx-3 semi-bold {{Route::currentRouteName() === 'games.index' ? 'active' : ''}}"><a href="{{route('games.index')}}">GAMES</a></li>
                     <li class="mx-3 semi-bold"><a href="#">COLLECTIBLES</a></li>
                     <li class="mx-3 semi-bold"><a href="#">VIDEOS</a></li>
                     <li class="mx-3 semi-bold"><a href="#">FANS</a></li>
