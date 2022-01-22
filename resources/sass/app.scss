@@ -390,4 +390,12 @@ aside {
     img {
         height: 40px;
     }
+    
+    li {
+        border-bottom: 4px solid transparent;
+        width: 100px;
+        &.active {
+            border-bottom: 4px solid $main-blue;
+        }
+    }
 }

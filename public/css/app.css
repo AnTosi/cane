@@ -328,3 +328,10 @@ section.posts .card img {
 aside img {
   height: 40px;
 }
+aside li {
+  border-bottom: 4px solid transparent;
+  width: 100px;
+}
+aside li.active {
+  border-bottom: 4px solid #0282F9;
+}
