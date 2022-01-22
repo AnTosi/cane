@@ -324,3 +324,7 @@ section.posts .card img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+aside img {
+  height: 40px;
+}

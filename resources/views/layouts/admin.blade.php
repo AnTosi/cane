@@ -16,11 +16,36 @@
         <script src="{{asset('js/app.js')}}" defer></script>
     </head>
     <body>
-        
-
-        <main>
-            @yield('content')
-        </main>
+        <div class="wrapper d-flex">
+            <aside class="d-inline-block mt-5">
+                <div class="d-flex flex-column flex-shrink-0 p-3 text_main-blue" style="width: 280px;">
+                    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text_main-blue text-decoration-none">
+                        <img src="{{asset('img/dc-logo.png')}}" alt=""> <span class="fs-4">Dashboard</span>
+                    </a>
+                    <hr>
+                    <ul class="nav nav-pills flex-column mb-auto">
+                        <li class="nav-item bg_main-blue">
+                            <a href="{{route('admin.posts.index')}}" class="nav-link text-white" aria-current="page">Posts</a>
+                        </li>
+                        <li class="bg_main-blue">
+                            <a href="#" class="nav-link text-white">Movies</a>
+                        </li>
+                        <li class="bg_main-blue">
+                            <a href="#" class="nav-link text-white">Comics</a>
+                        </li>
+                        <li class="bg_main-blue">
+                            <a href="#" class="nav-link text-white">Videos</a>
+                        </li>
+                        <li class="nav-item bg_main-blue">
+                            <a href="{{route('admin.games.index')}}" class="nav-link text-white" aria-current="page">Games</a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <main>
+                @yield('content')
+            </main>
+        </div>
 
         
     </body>

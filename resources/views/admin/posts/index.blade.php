@@ -1,10 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 
     <div class="heading d-flex d-flex flex-column align-items-center ">
-        <h1 class="text-center">Posts table</h1>
-        <a name="" id="" class="btn btn-primary" href="{{ route('admin.posts.create')}}" role="button">Create</a>
+        <h1 class="text-center mt-3">Posts table</h1>
+        <a name="" id="" class="btn btn-primary align-self-end" href="{{ route('admin.posts.create')}}" role="button">Create</a>
     </div>
     
     <div class="container">
