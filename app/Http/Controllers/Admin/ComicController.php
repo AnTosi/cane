@@ -63,9 +63,10 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Comic $comic)
     {
         //
+        return view('comics.show', compact('comic'));
     }
 
     /**
@@ -74,9 +75,10 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Comic $comic)
     {
         //
+        return view('admin.comics.edit', compact('comic'));
     }
 
     /**
@@ -86,9 +88,25 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Comic $comic)
     {
         //
+        $validated_data = $request->validate(
+            [
+                'title'=>'required | unique:comics',
+                'description'=>'nullable',
+                'thumb'=>'nullable',
+                'price'=>'nullable',
+                'series'=>'nullable',
+                'sale_date'=>'nullable',
+                'type'=>'nullable'
+            ]
+            );
+        
+            Comic::update($validated_data);
+
+            return redirect()->route('admin.comics.index')->with('feedback', 'Comic succesfully modified');
+
     }
 
     /**
@@ -97,8 +115,11 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Comic $comic)
     {
         //
+        $comic->delete();
+        return redirect()->route('admin.comics.index')->with('feedback', 'Comic succesfully deleted from database');
+
     }
 }

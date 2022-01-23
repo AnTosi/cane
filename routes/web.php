@@ -30,7 +30,7 @@ Route::get('admin/comics/create', 'Admin\ComicController@create')->name('admin.c
 
 Route::post('admin/comics', 'Admin\ComicController@store')->name('admin.comics.store');
 
-Route::get('admin/comics/{comic}', 'Admin\ComicController@store')->name('admin.comics.show');
+Route::get('admin/comics/{comic}', 'Admin\ComicController@show')->name('admin.comics.show');
 
 Route::get('admin/comics/{comic}/edit', 'Admin\ComicController@edit')->name('admin.comics.edit');
 
