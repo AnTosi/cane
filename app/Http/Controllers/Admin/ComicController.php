@@ -16,7 +16,7 @@ class ComicController extends Controller
     public function index()
     {
         //
-        $comics = Comic::orderBy('id', 'desc')->paginate(15);
+        $comics = Comic::orderBy('id', 'desc')->paginate(12);
         return view('admin.comics.index', compact('comics'));
     }
 
@@ -40,6 +40,21 @@ class ComicController extends Controller
     public function store(Request $request)
     {
         //
+        $validated_data = $request->validate(
+            [
+                'title'=>'required | unique:comics',
+                'description'=>'nullable',
+                'thumb'=>'nullable',
+                'price'=>'nullable',
+                'series'=>'nullable',
+                'sale_date'=>'nullable',
+                'type'=>'nullable'
+            ]
+            );
+        
+            Comic::create($validated_data);
+
+            return redirect()->route('admin.comics.index')->with('feedback', 'Comic succesfully added');
     }
 
     /**

@@ -14,10 +14,9 @@
                 <small id="helpId" class="text-muted">Maximum 200 characters</small>
 
                 @error('title')
-                    <div class="alert alert" role="alert">
+                    <div class="alert alert-danger" role="alert">
                         {{$message}}
-                    </div>
-                    
+                    </div>   
                 @enderror
 
             </div>
@@ -39,9 +38,14 @@
 
             {{-- add img-url --}}
             <div class="mb-3">
-              <label for="cover" class="form-label">Cover Url</label>
-              <input type="text" class="form-control @error('cover') url is invalid @enderror" name="cover" id="cover" aria-describedby="coverHelper" placeholder="Insert here the link to the image">
-              <small id="coverHelper" class="form-text text-muted">Link to the cover img</small>
+                <label for="cover" class="form-label">Cover Url</label>
+                <input type="text" class="form-control @error('cover') url is invalid @enderror" name="cover" id="cover" aria-describedby="coverHelper" placeholder="Insert here the link to the image">
+                <small id="coverHelper" class="form-text text-muted">Link to the cover img</small>
+                @error('cover')
+                    <div class="alert alert-danger" role="alert">
+                        {{ $message }}
+                    </div>                   
+                @enderror                
             </div>
             {{-- //add img-url --}}
 

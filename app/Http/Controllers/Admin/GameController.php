@@ -43,7 +43,7 @@ class GameController extends Controller
         //
         $validated_data = $request->validate(
             [
-                'title'=>'required | unique:posts',
+                'title'=>'required | unique:games',
                 'description' => 'nullable',
                 'cover' => 'nullable',
                 'is_available' => 'nullable'
@@ -94,7 +94,10 @@ class GameController extends Controller
         //
         $validated_data = $request->validate(
             [
-                'title'=>'required | unique:posts',
+                'title' => [
+                    'required',
+                    Rule::unique('games')->ignore($game->id),
+                ],
                 'description' => 'nullable',
                 'cover' => 'nullable',
                 'is_available' => 'nullable'
