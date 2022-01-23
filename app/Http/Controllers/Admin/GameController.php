@@ -53,7 +53,7 @@ class GameController extends Controller
 
         Game::create($validated_data);
 
-        return redirect()->route('admin.games.index');
+        return redirect()->route('admin.games.index')->with('feedback', 'Game succesfully added');
 
     }
 
@@ -88,9 +88,23 @@ class GameController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Game $game)
     {
         //
+        $validated_data = $request->validate(
+            [
+                'title'=>'required | unique:posts',
+                'description' => 'nullable',
+                'cover' => 'nullable',
+                'is_available' => 'nullable'
+
+            ]
+            );
+
+        $game->update($validated_data);
+
+        return redirect()->route('admin.games.index')->with('feedback', 'Game succesfully modified');
+
     }
 
     /**
