@@ -339,3 +339,7 @@ aside li.active {
 form {
   width: 800px;
 }
+
+.modal-footer form {
+  width: unset;
+}

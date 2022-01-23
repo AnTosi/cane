@@ -34,7 +34,38 @@
                     <td>{{$game->title}}</td>
                     <td>{{$game->created_at}}</td>
                     <td>{{$game->updated_at}}</td>
-                    <td><a class="btn btn-primary" title="view" href="{{route('admin.games.show', $game->id)}}"><i class="fas fa-eye"></i></a> <a class="btn btn-info" title="edit" href="{{route('admin.games.edit', $game->id)}}"><i class="fas fa-edit"></i></a> - Delete</td>
+                    <td>
+                        <a class="btn btn-primary" title="view" href="{{route('admin.games.show', $game->id)}}"><i class="fas fa-eye"></i></a> 
+                        <a class="btn btn-info" title="edit" href="{{route('admin.games.edit', $game->id)}}"><i class="fas fa-edit"></i></a> 
+                        <button title="delete" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete{{$game->id}}">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                        
+                        <!-- Modal -->
+                        <div class="modal fade" id="delete{{$game->id}}" tabindex="-1" role="dialog" aria-labelledby="modal-{{$game->id}}" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Delete Game {{$game->title}}</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Attention, deleted game cannot be recovered.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <form action="{{route('admin.games.destroy', $game->id)}}" method="post">
+                                                @csrf
+                                                @method('DELETE')
+                
+                                                <button type="submit" class="btn btn-danger">Delete</button>
+                                            </form>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
                 </tr>
                 @endforeach
             </tbody>

@@ -118,6 +118,6 @@ class GameController extends Controller
     {
         //
         $game->delete();
-        return redirect('admin.games.index')->with('feedback', 'Game succesfully removed');
+        return redirect()->route('admin.games.index')->with('feedback', 'Game succesfully removed');
     }
 }
