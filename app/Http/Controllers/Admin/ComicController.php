@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Comic;
+use Illuminate\Validation\Rule;
 
 class ComicController extends Controller
 {
@@ -93,7 +94,10 @@ class ComicController extends Controller
         //
         $validated_data = $request->validate(
             [
-                'title'=>'required | unique:comics',
+                'title' => [
+                    'required',
+                    Rule::unique('comics')->ignore($comic->id),
+                ],
                 'description'=>'nullable',
                 'thumb'=>'nullable',
                 'price'=>'nullable',
@@ -103,7 +107,7 @@ class ComicController extends Controller
             ]
             );
         
-            Comic::update($validated_data);
+            $comic->update($validated_data);
 
             return redirect()->route('admin.comics.index')->with('feedback', 'Comic succesfully modified');
 

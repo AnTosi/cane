@@ -2,15 +2,16 @@
 
 @section('content')
     <div class="container m-3">
-        <h1>Add a new Comic</h1>
+        <h1>Edit a Comic</h1>
         
-        <form action="{{route('admin.comics.store')}}" method="post">
+        <form action="{{route('admin.comics.update')}}" method="post">
             @csrf
+            @method('PUT')
 
-            {{-- add title --}}
+            {{-- edit title --}}
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
-                <input type="text" name="title" id="title" class="form-control @error('title') is-invalid @enderror" placeholder="Type the comic title here" aria-describedby="titleHelper" value="{{old('title')}}">
+                <input type="text" name="title" id="title" class="form-control @error('title') is-invalid @enderror" placeholder="Type the comic title here" aria-describedby="titleHelper" value="{{$comic->title}}">
                 <small id="helpId" class="text-muted">Maximum 200 characters</small>
 
                 @error('title')
@@ -20,12 +21,12 @@
                 @enderror
 
             </div>
-            {{-- //add title --}}
+            {{-- //edit title --}}
 
-            {{-- add description --}}
+            {{-- edit description --}}
             <div class="mb-3">
                 <label for="description" class="form-label">Description</label>
-                <textarea class="form-control @error('description')is-invalid @enderror" name="description" id="description" rows="3">{{old('description')}}</textarea>
+                <textarea class="form-control @error('description')is-invalid @enderror" name="description" id="description" rows="3">{{$comic->description}}</textarea>
                 <small id="description helper" class="form-text text-muted">Comic description</small>
                 @error('description')
                     <div class="alert alert-danger" role="alert">
@@ -33,13 +34,13 @@
                     </div>                   
                 @enderror                
             </div>
-            {{-- //add description --}}
+            {{-- //edit description --}}
 
 
-            {{-- add img-url --}}
+            {{-- edit img-url --}}
             <div class="mb-3">
                 <label for="thumb " class="form-label">Thumb Url</label>
-                <input type="text" class="form-control @error('thumb') url is invalid @enderror" name="thumb" id="thumb" aria-describedby="thumbHelper" placeholder="Insert here the link to the image" value="{{old('thumb')}}>
+                <input type="text" class="form-control @error('thumb') url is invalid @enderror" name="thumb" id="thumb" aria-describedby="thumbHelper" placeholder="Insert here the link to the image" value="{{$comic->thumb}}">
                 <small id="thumbHelper" class="form-text text-muted">Link to the thumb img</small>
                 @error('thumb')
                     <div class="alert alert-danger" role="alert">
@@ -48,13 +49,13 @@
                 @enderror
                 
             </div>
-            {{-- //add img-url --}}
+            {{-- //edit img-url --}}
 
             {{-- price --}}
 
             <div class="mb-3">
                 <label class="form-label" for="price">Price</label>
-                <input type="text" class="form-control @error('price') is invalid @enderror"  name ="price" id="price"  value="{{old('price')}}" aria-describedby="priceHelper" placeholder="Insert here the comic price">
+                <input type="text" class="form-control @error('price') is invalid @enderror"  name ="price" id="price"  value="{{$comic->price}}" aria-describedby="priceHelper" placeholder="Insert here the comic price">
                 <small id="priceHelper" class="form-text text-muted">Comic price</small>
                 @error('price')
                     <div class="alert alert-danger" role="alert">
@@ -68,7 +69,7 @@
             {{-- series --}}
             <div class="mb-3">
                 <label class="form-label" for="series">Series</label>
-                <input type="text" class="form-control @error('series') is invalid @enderror"  name ="series" id="series"  value="{{old('series')}}" aria-describedby="seriesHelper" placeholder="Insert here the comic series">
+                <input type="text" class="form-control @error('series') is invalid @enderror"  name ="series" id="series"  value="{{$comic->series}}" aria-describedby="seriesHelper" placeholder="Insert here the comic series">
                 <small id="seriesHelper" class="form-text text-muted">Comic series</small>
                 @error('series')
                     <div class="alert alert-danger" role="alert">
@@ -81,7 +82,7 @@
             {{-- sale_date --}}
             <div class="mb-3">
                 <label class="form-label" for="sale_date">Sale date</label>
-                <input type="text" class="form-control @error('sale_date') is invalid @enderror"  name ="sale_date" id="sale_date"  value="{{old('sale_date')}}" aria-describedby="sale_dateHelper" placeholder="Insert here the comic sale_date">
+                <input type="text" class="form-control @error('sale_date') is invalid @enderror"  name ="sale_date" id="sale_date"  value="{{$comic->sale_date}}" aria-describedby="sale_dateHelper" placeholder="Insert here the comic sale_date">
                 <small id="sale_dateHelper" class="form-text text-muted">Comic sale date</small>
                 @error('sale_date')
                     <div class="alert alert-danger" role="alert">
@@ -94,7 +95,7 @@
             {{-- type --}}
             <div class="mb-3">
                 <label class="form-label" for="type">Type</label>
-                <input type="text" class="form-control @error('type') is invalid @enderror"  name ="type" id="type"  value="{{old('type')}}" aria-describedby="typeHelper" placeholder="Insert here the comic type">
+                <input type="text" class="form-control @error('type') is invalid @enderror"  name ="type" id="type"  value="{{$comic->type}}" aria-describedby="typeHelper" placeholder="Insert here the comic type">
                 <small id="typeHelper" class="form-text text-muted">Comic type</small>
                 @error('type')
                     <div class="alert alert-danger" role="alert">
