@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Comic;
 
 class ComicController extends Controller
 {
@@ -15,6 +16,8 @@ class ComicController extends Controller
     public function index()
     {
         //
+        $comics = Comic::orderBy('id', 'desc')->paginate(15);
+        return view('admin.comics.index', compact('comics'));
     }
 
     /**
@@ -25,6 +28,7 @@ class ComicController extends Controller
     public function create()
     {
         //
+        return view('admin.comics.create');
     }
 
     /**

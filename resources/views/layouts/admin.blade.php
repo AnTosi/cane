@@ -30,8 +30,8 @@
                         <li class="text_main-blue">
                             <a href="#" class="nav-link px-0">Movies</a>
                         </li>
-                        <li class="text_main-blue">
-                            <a href="#" class="nav-link px-0">Comics</a>
+                        <li class="nav-item text_main-blue {{Route::currentRouteName() === 'admin.comics.index' ? 'active' : ''}}">
+                            <a href="{{route('admin.comics.index')}}" class="nav-link px-0">Comics</a>
                         </li>
                         <li class="text_main-blue">
                             <a href="#" class="nav-link px-0">Videos</a>

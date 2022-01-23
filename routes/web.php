@@ -24,7 +24,7 @@ Route::get('comics/{comic}', 'ComicController@show')->name('comic');
 
 
 //comic routes for admin
-Route::get('/admin/comics', 'ComicController@index')->name('admin.comics.index');
+Route::get('/admin/comics', 'Admin\ComicController@index')->name('admin.comics.index');
 
 Route::get('admin/comics/create', 'Admin\ComicController@create')->name('admin.comics.create');
 

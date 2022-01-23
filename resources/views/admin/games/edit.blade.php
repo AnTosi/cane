@@ -28,7 +28,7 @@
             <div class="mb-3">
                 <label for="description" class="form-label">Description</label>
                 <textarea class="form-control @error('description')is-invalid @enderror" name="description" id="description" rows="3">{{$game->description}}</textarea>
-                <small id="cover helper" class="form-text text-muted">Game description</small>
+                <small id="descriptionHelper" class="form-text text-muted">Game description</small>
                 @error('description')
                     <div class="alert alert-danger" role="alert">
                         {{ $message }}
