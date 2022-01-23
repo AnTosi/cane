@@ -39,9 +39,9 @@
                     <td>{{$comic->created_at}}</td>
                     <td>{{$comic->updated_at}}</td>
                     <td>
-                        <a class="btn btn-primary m-2" title="view" href="{{route('admin.comics.show', $comic->id)}}"><i class="fas fa-eye"></i></a> 
-                        <a class="btn btn-info m-2" title="edit" href="{{route('admin.comics.edit', $comic->id)}}"><i class="fas fa-edit"></i></a> 
-                        <button title="delete" type="button" class="btn btn-danger m-2" data-bs-toggle="modal" data-bs-target="#delete{{$comic->id}}">
+                        <a class="btn btn-primary m-1" title="view" href="{{route('admin.comics.show', $comic->id)}}"><i class="fas fa-eye"></i></a> 
+                        <a class="btn btn-info m-1" title="edit" href="{{route('admin.comics.edit', $comic->id)}}"><i class="fas fa-edit"></i></a> 
+                        <button title="delete" type="button" class="btn btn-danger m-1" data-bs-toggle="modal" data-bs-target="#delete{{$comic->id}}">
                             <i class="fas fa-trash"></i>
                         </button>
                         
