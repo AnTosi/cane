@@ -18,7 +18,7 @@
             <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Cover</th>
+                    <th>Thumb</th>
                     <th>Title</th>
                     <th>Created at</th>
                     <th>Updated at</th>
@@ -30,14 +30,18 @@
                 @foreach ($comics as $comic)
                 <tr>
                     <td scope="row">{{$comic->id}}</td>
-                    <td class="d-flex justify-content-center"><img height="80px" src="{{$comic->cover}}" alt=""></td>
+                    <td class="d-flex justify-content-center"><img height="80px" src="{{$comic->thumb}}" alt=""></td>
                     <td>{{$comic->title}}</td>
+                    <td>{{substr($comic->description, 0, 120)}}...</td>
+                    <td>{{$comic->price}}</td>
+                    <td>{{$comic->series}}</td>
+                    <td>{{$comic->type}}</td>
                     <td>{{$comic->created_at}}</td>
                     <td>{{$comic->updated_at}}</td>
                     <td>
-                        <a class="btn btn-primary" title="view" href="{{route('admin.comics.show', $comic->id)}}"><i class="fas fa-eye"></i></a> 
-                        <a class="btn btn-info" title="edit" href="{{route('admin.comics.edit', $comic->id)}}"><i class="fas fa-edit"></i></a> 
-                        <button title="delete" type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete{{$comic->id}}">
+                        <a class="btn btn-primary m-2" title="view" href="{{route('admin.comics.show', $comic->id)}}"><i class="fas fa-eye"></i></a> 
+                        <a class="btn btn-info m-2" title="edit" href="{{route('admin.comics.edit', $comic->id)}}"><i class="fas fa-edit"></i></a> 
+                        <button title="delete" type="button" class="btn btn-danger m-2" data-bs-toggle="modal" data-bs-target="#delete{{$comic->id}}">
                             <i class="fas fa-trash"></i>
                         </button>
                         

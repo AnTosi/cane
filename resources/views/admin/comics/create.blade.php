@@ -38,8 +38,8 @@
 
             {{-- add img-url --}}
             <div class="mb-3">
-                <label for="thumb " class="form-label">Thumb Url</label>
-                <input type="text" class="form-control @error('thumb') url is invalid @enderror" name="thumb" id="thumb" aria-describedby="thumbHelper" placeholder="Insert here the link to the image" value="{{old('thumb')}}>
+                <label for="thumb" class="form-label">Thumb Url</label>
+                <input type="text" class="form-control @error('thumb') url is invalid @enderror" name="thumb" id="thumb" aria-describedby="thumbHelper" placeholder="Insert here the link to the image" value="{{old('thumb')}}">
                 <small id="thumbHelper" class="form-text text-muted">Link to the thumb img</small>
                 @error('thumb')
                     <div class="alert alert-danger" role="alert">
