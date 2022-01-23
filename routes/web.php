@@ -15,11 +15,17 @@ use Illuminate\Support\Facades\Route;
 
 
 
-// comics pages routes
+// comics pages routes for guest
 
 
 Route::get('/', 'ComicController@index')->name('comics');
+
+Route::get('admin/posts/create', 'Admin\ComicController@create')->name('admin.comic.create');
+
 Route::get('comics/{comic}', 'ComicController@show')->name('comic');
+
+
+
 
 // dashboard
 Route::view('admin', 'admin.dashboard')->name('admin');
