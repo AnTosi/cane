@@ -34,7 +34,7 @@
                         <td>{{$post->created_at}}</td>
                         <td>{{$post->updated_at}}</td>
                         <td>
-                            <a class="btn btn-primary" title="view" href="{{route('admin.posts.show', $post->id)}}"><i class="fas fa-eye"></i></i></a>
+                            <a class="btn btn-primary" title="view" href="{{route('admin.posts.show', $post->id)}}"><i class="fas fa-eye"></i></a>
 
                             <a class="btn btn-info" title="edit" href="{{route('admin.posts.edit', $post->id)}}"><i class="fas fa-edit"></i></a>
                             <!-- Button trigger modal -->

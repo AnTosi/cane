@@ -74,9 +74,11 @@ class GameController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Game $game)
     {
         //
+        return view('admin.games.edit', compact('game'));
+        
     }
 
     /**

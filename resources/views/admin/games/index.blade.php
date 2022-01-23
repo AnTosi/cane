@@ -24,7 +24,7 @@
                     <td>{{$game->title}}</td>
                     <td>{{$game->created_at}}</td>
                     <td>{{$game->updated_at}}</td>
-                    <td>View - Edit - Delete</td>
+                    <td><a class="btn btn-primary" title="view" href="{{route('admin.games.show', $game->id)}}"><i class="fas fa-eye"></i></a> <a class="btn btn-info" title="edit" href="{{route('admin.games.edit', $game->id)}}"><i class="fas fa-edit"></i></a> - Delete</td>
                 </tr>
                 @endforeach
             </tbody>

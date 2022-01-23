@@ -335,3 +335,7 @@ aside li {
 aside li.active {
   border-bottom: 4px solid #0282F9;
 }
+
+form {
+  width: 800px;
+}
