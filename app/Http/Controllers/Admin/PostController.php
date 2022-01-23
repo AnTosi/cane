@@ -60,7 +60,7 @@ class PostController extends Controller
         Post::create($validated_data);
         
         //post | redirect | get
-        return redirect()->route('admin.posts.index');
+        return redirect()->route('admin.posts.index')->with('feedback', 'Post succesfully created');
         
     }
 

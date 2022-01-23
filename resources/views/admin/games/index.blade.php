@@ -4,6 +4,16 @@
     <div class="container">
         <h1>All Games x Admin</h1>
         <a name="create" id="create" class="btn btn-primary" href="{{route('admin.games.create')}}" role="button">Add a Game</a>
+        
+        <div class="container">
+            @if (session('feedback'))
+                <div class="alert alert-success my-3 ">
+                    {{ session('feedback') }}
+                </div>
+            @endif
+        </div>
+        
+        
         <table class="table">
             <thead>
                 <tr>

@@ -80,8 +80,6 @@ Route::post('/admin/games', 'Admin\GameController@store')->name('admin.games.sto
 //show
 Route::get('admin/games/{game}', 'Admin\GameController@show')->name('admin.games.show');
 
-
-
 //edit
 Route::get('/admin/games/{game}/edit', 'Admin\GameController@edit')->name('admin.games.edit');
 
@@ -90,7 +88,6 @@ Route::put('/admin/games/{game}', 'Admin\GameController@update')->name('admin.ga
 
 //delete
 Route::delete('/admin/games/{game}', 'Admin\GameController@destroy')->name('admin.games.destroy');
-
 
 
 //Guest routes: index and show
